@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WabbitBot | Best Free Discord Economy Bot</title>
+    <meta name="description"
+        content="WabbitBot is the best free Discord economy bot featuring fully customizable currency systems, shops, items, XP leveling, pets, casinos, crafting, stocks, jobs, and more.">
+
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content">
+
+            <div class="logo-container">
+                <img class="logo" id="nav-logo" src="./assets/img/wabbit-solid.png" alt="wabbit"> WabbitBot
+            </div>
+
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-menu-wrapper" id="navMenu">
+                <div class="nav-links">
+                    <a href="#" onclick="toggleMenu()">Dashboard</a>
+                    <a href="#" onclick="toggleMenu()">Library</a>
+                    <a href="#" onclick="toggleMenu()">Store</a>
+                    <a href="#" onclick="toggleMenu()">Docs</a>
+                    <a href="#" onclick="toggleMenu()">Support</a>
+                </div>
+
+                <button class="btn theme-toggle-btn" id="themeToggle" onclick="toggleTheme()"
+                    aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="https://discord.com/oauth2/authorize?client_id=1348370129804591115&permissions=1376805841926&integration_type=0&scope=bot"
+                    target="_blank" class="btn btn-discord">
+                    <i class="fa-brands fa-discord"></i> Login
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <h1>Hop Into The Fun!</h1>
+                <p class="subtitle">
+                    The <strong>100% Free</strong> economy bot that multiplies fun like... well, rabbits!
+                    Customize everything from shops to casinos and build your empire.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1348370129804591115&permissions=1376805841926&integration_type=0&scope=bot"
+                        target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-plus"></i> Add Wabbit
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fa-solid fa-compass"></i> Open Dashboard
+                    </a>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Commands Today</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Buttons Clicked</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free to Use</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why WabbitBot?</h2>
+            <div class="grid">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                        <h3>Custom Items & Shop</h3>
+                    </div>
+                    <p>Create unlimited custom items! Configure descriptions, icons, prices, and stock amounts. You can
+                        even import existing items from other bots.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-coins"></i></div>
+                        <h3>Custom Currency</h3>
+                    </div>
+                    <p>Dual currency system (Coins & Gems). Fully customize names, icons, and role-based permissions for
+                        spawning money.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Tradable Stocks</h3>
+                    </div>
+                    <p>Real-time custom stock market. Create custom tickers, watch dynamic charts, and let users invest
+                        in a simulated economy.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3>Custom Jobs</h3>
+                    </div>
+                    <p>Create unlimited custom jobs with specific titles, salaries, and requirements. Offer tenure-based
+                        incentives for loyal workers.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-dice"></i></div>
+                        <h3>Casino Games</h3>
+                    </div>
+                    <p>12 preloaded games including Blackjack, Roulette, and Slots. Configure house edge, rules, and
+                        track lifetime gambling stats.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-mountain"></i></div>
+                        <h3>Gathering</h3>
+                    </div>
+                    <p>Explore commands like /hunt, /fish, /dig, and /mine. Collect dozens of items or create your own
+                        custom lootpools.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h3>Chests & Wheel</h3>
+                    </div>
+                    <p>Create chest items with custom loot tables and configure prizes for the Wheel of Fortune. Add
+                        spin tokens to any lootpool!</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-gavel"></i></div>
+                        <h3>Multiplayer Market</h3>
+                    </div>
+                    <p>Host real-time auctions, trade items between users, and engage the whole server with a daily
+                        lottery drawing system.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-paw"></i></div>
+                        <h3>Collect Pets</h3>
+                    </div>
+                    <p>Adopt unique pets that can automate daily tasks like fishing and mining. Pets provide small
+                        advantages but are never pay-to-win.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+                        <h3>Integrated XP</h3>
+                    </div>
+                    <p>Reward text and voice activity. Configure item and role rewards for level thresholds with custom
+                        multipliers.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                        <h3>Community</h3>
+                    </div>
+                    <p>Grow a connected server with suggestions, giveaways, global leaderboards, streaks, and
+                        customizable user profiles.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
+                        <h3>Configuration</h3>
+                    </div>
+                    <p>Fine-tune every command. Control cooldowns, restrict access by role or channel, and manage
+                        everything via the Dashboard.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Ready to start the burrow?</h2>
+                <p style="margin-bottom: 30px; font-size: 1.2rem;">Join <strong>0</strong> users enjoying WabbitBot today!</p>
+                <a href="https://discord.com/oauth2/authorize?client_id=1348370129804591115&permissions=1376805841926&integration_type=0&scope=bot"
+                    target="_blank" class="btn"
+                    style="color: var(--carrot-orange); border-color: var(--border-color); background: white;">
+                    Invite WabbitBot Now!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WabbitBot. Not affiliated with Discord.</p>
+            <p style="margin-top: 10px; opacity: 0.7; font-size: 0.9rem;">
+                <a href="./privacy-policy/">Privacy</a> | <a href="./tos/">Terms</a> | <a href="./404/">Support Server</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        const toggleBtn = document.getElementById('themeToggle');
+        const icon = toggleBtn.querySelector('i');
+        const navLogo = document.getElementById('nav-logo');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            html.setAttribute('data-theme', currentTheme);
+            updateIcon(currentTheme);
+        }
+
+        function toggleTheme() {
+            const current = html.getAttribute('data-theme');
+            const target = current === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', target);
+            localStorage.setItem('theme', target);
+            updateIcon(target);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                navLogo.src = './assets/img/wabbit-solid-white.png';
+
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                navLogo.src = './assets/img/wabbit-solid.png';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

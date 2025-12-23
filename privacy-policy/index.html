@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WabbitBot | Privacy Policy</title>
+    <meta name="description"
+        content="Privacy Policy for WabbitBot, the best free Discord economy bot.">
+
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content">
+
+            <div class="logo-container">
+                <img class="logo" id="nav-logo" src="../assets/img/wabbit-solid.png" alt="wabbit"> WabbitBot
+            </div>
+
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-menu-wrapper" id="navMenu">
+                <div class="nav-links">
+                    <a href="#" onclick="toggleMenu()">Dashboard</a>
+                    <a href="#" onclick="toggleMenu()">Library</a>
+                    <a href="#" onclick="toggleMenu()">Store</a>
+                    <a href="#" onclick="toggleMenu()">Docs</a>
+                    <a href="#" onclick="toggleMenu()">Support</a>
+                </div>
+
+                <button class="btn theme-toggle-btn" id="themeToggle" onclick="toggleTheme()"
+                    aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="https://discord.com/oauth2/authorize?client_id=1348370129804591115&permissions=1376805841926&integration_type=0&scope=bot"
+                    target="_blank" class="btn btn-discord">
+                    <i class="fa-brands fa-discord"></i> Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="page-box">
+                <h1>Privacy Policy</h1>
+                <p>
+                    Your privacy is important to us. This Privacy Policy explains how WabbitBot ("We", "Us", "Our")
+                    collects, uses, and protects your information when you use our services.
+                </p>
+
+                <h2>1. Information We Collect</h2>
+                <ul>
+                    <li><strong>Discord Information:</strong> When you interact with our services, we collect Discord account
+                        information that is shared with bots, such as your username, ID, avatar, and server roles.</li>
+                    <li><strong>Command Usage:</strong> We collect data on commands used, including the user who initiated
+                        the command, the server it was used in, and the command parameters.</li>
+                    <li><strong>Server Information:</strong> We collect information about Discord servers where our bot is
+                        installed, including server IDs, names, channel lists, and role configurations.</li>
+                    <li><strong>Custom Configurations:</strong> Any custom settings, commands, or configurations you create
+                        through our dashboard or bot commands.</li>
+                </ul>
+
+                <h2>2. How We Use Your Information</h2>
+                <ul>
+                    <li>To provide our bot services and respond to your commands.</li>
+                    <li>To maintain custom configurations for your Discord servers.</li>
+                    <li>To improve our services based on error logs and crashes.</li>
+                    <li>To prevent abuse of our services (such as spam).</li>
+                </ul>
+
+                <h2>3. Message Content</h2>
+                <p>
+                    We may process the message content of messages you send in Discord text channels. Processing can
+                    include checking for AutoMod violations, validating XP earned, or awarding prizes. Once processed, we
+                    never cache or store your message content. However, please note that edited and deleted messages may
+                    be sent to the server's message log channel, if configured. This ensures server moderators can review
+                    potentially rule-breaking content.
+                </p>
+
+                <h2>4. Data Retention</h2>
+                <p>
+                    We retain information only as long as necessary to provide our services or to comply with legal
+                    obligations. If you request deletion of your data or remove our bot from your server, we will remove
+                    your server-specific configurations and cease collecting new data about your server.
+                </p>
+
+                <h2>5. Third-Party Services</h2>
+                <p>
+                    Our services operate through Discord's platform and API. Your interactions with our bot are subject
+                    to Discord's Privacy Policy as well. We may use third-party services for bot hosting or other
+                    operational needs.
+                </p>
+
+                <h2>6. Your Rights</h2>
+                <ul>
+                    <li>You can review your server's configurations through our dashboard at any time.</li>
+                    <li>You can remove our bot from your server at any time to prevent further data collection.</li>
+                    <li>You can request deletion of your server-specific data by contacting us via our Support Server.</li>
+                </ul>
+
+                <h2>7. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. We will notify users of any significant
+                    changes through our bot's status or announcement channels if possible. Continued use of our services
+                    after policy changes constitutes acceptance of the revised Privacy Policy.
+                </p>
+
+                <h2>8. Contact Information</h2>
+                <p>
+                    If you have questions or concerns about this Privacy Policy or our data practices, please contact us
+                    via our Support Server.
+                </p>
+
+                <p style="margin-top: 30px;">
+                    <strong>By using our services, you acknowledge that you have read, understood, and agreed to this
+                        Privacy Policy.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WabbitBot. Not affiliated with Discord.</p>
+            <p style="margin-top: 10px; opacity: 0.7; font-size: 0.9rem;">
+                <a href="#">Privacy</a> | <a href="../tos/">Terms</a> | <a href="../404/">Support Server</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        const toggleBtn = document.getElementById('themeToggle');
+        const icon = toggleBtn.querySelector('i');
+        const navLogo = document.getElementById('nav-logo');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            html.setAttribute('data-theme', currentTheme);
+            updateIcon(currentTheme);
+        }
+
+        function toggleTheme() {
+            const current = html.getAttribute('data-theme');
+            const target = current === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', target);
+            localStorage.setItem('theme', target);
+            updateIcon(target);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                navLogo.src = '../assets/img/wabbit-solid-white.png';
+
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                navLogo.src = '../assets/img/wabbit-solid.png';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

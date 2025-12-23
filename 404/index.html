@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WabbitBot | 404 Not Found</title>
+    <meta name="description" content="Page not found - WabbitBot">
+
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content">
+            <div class="logo-container">
+                <img class="logo" id="nav-logo" src="./assets/img/wabbit-solid.png" alt="wabbit"> WabbitBot
+            </div>
+
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-menu-wrapper" id="navMenu">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="#">Dashboard</a>
+                    <a href="#">Docs</a>
+                </div>
+
+                <button class="btn theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="#" class="btn btn-discord">
+                    <i class="fa-brands fa-discord"></i> Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="error-section">
+        <div class="error-box">
+            <div class="error-icon">
+                <i class="fa-solid fa-carrot" style="transform: rotate(45deg);"></i>
+                <i class="fa-solid fa-question"></i>
+            </div>
+            
+            <div class="error-code">404</div>
+            
+            <h2>Wrong Rabbit Hole!</h2>
+            
+            <p>
+                It looks like this page has hopped away, or you've burrowed a bit too deep. 
+                Don't worry, even the best bunnies get lost sometimes.
+            </p>
+
+            <a href="../" class="btn btn-primary">
+                <i class="fa-solid fa-house"></i> Hop Back Home
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WabbitBot. Not affiliated with Discord.</p>
+            <p style="margin-top: 10px; opacity: 0.7; font-size: 0.9rem;">
+                <a href="../privacy-policy/">Privacy</a> | <a href="../tos/">Terms</a> | <a href="#">Support Server</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        const toggleBtn = document.getElementById('themeToggle');
+        const icon = toggleBtn.querySelector('i');
+        const navLogo = document.getElementById('nav-logo');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            html.setAttribute('data-theme', currentTheme);
+            updateIcon(currentTheme);
+        }
+
+        function toggleTheme() {
+            const current = html.getAttribute('data-theme');
+            const target = current === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', target);
+            localStorage.setItem('theme', target);
+            updateIcon(target);
+        }
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                if(navLogo) navLogo.src = '../assets/img/wabbit-solid-white.png';
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                if(navLogo) navLogo.src = '../assets/img/wabbit-solid.png';
+            }
+        }
+    </script>
+</body>
+</html>
